@@ -1,5 +1,5 @@
 import time, random
-import os
+import os, sys
 import threading as th
 import typewriter
 
@@ -25,7 +25,9 @@ skor = 0
 trial = 0
 tot_skor = 0
 
-os.system('clear')
+if sys.platform in ['linux', 'darwin']: os.system('clear') 
+else: os.system('cls')
+    
 tw.print('# Game Tembak')
 tw.print('=============\n')
 
